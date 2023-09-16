@@ -1,0 +1,4 @@
+_id,id,materiaprima,cantidad_comprada,cantidad_gastada,cantidad_restante
+650520d9f1358c5446ce4298,1,agua,100,10,90
+650521d1f1358c5446ce429a,2,malta,100,10,90
+6505224ff1358c5446ce429c,3,lupulo,100,10,90

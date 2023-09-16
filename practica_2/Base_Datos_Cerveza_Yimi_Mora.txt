@@ -1,7 +1,7 @@
-mysql> CREATE DATABASE Mi_cerveza;
+mysql> CREATE DATABASE cerveza;
 Query OK, 1 row affected (0.02 sec)
 
-mysql> USE Mi_cerveza;
+mysql> USE cerveza;
 Database changed
 
 mysql> CREATE TABLE categoria (
@@ -31,17 +31,17 @@ mysql> ALTER TABLE cerveza ADD COLUMN idcategoria INT;
 
 mysql> ALTER TABLE cerveza ADD FOREIGN KEY (idcategoria)  REFERENCES categoria (idcategoria);
 
-mysql> CREATE TABLE tipo_categoria (
+mysql> CREATE TABLE tipocategoria (
     -> idtipo_categoria INT PRIMARY KEY AUTO_INCREMENT
     -> );
 
-mysql> ALTER TABLE tipo_categoria ADD COLUMN idtipo INT;
+mysql> ALTER TABLE tipocategoria ADD COLUMN idtipo INT;
 
-mysql> ALTER TABLE tipo_categoria ADD FOREIGN KEY (idtipo) REFERENCES tipo (idtipo);
+mysql> ALTER TABLE tipocategoria ADD FOREIGN KEY (idtipo) REFERENCES tipo (idtipo);
 
-mysql> ALTER TABLE tipo_categoria ADD COLUMN idcategoria INT;
+mysql> ALTER TABLE tipocategoria ADD COLUMN idcategoria INT;
 
-mysql> ALTER TABLE tipo_categoria ADD FOREIGN KEY (idcategoria) REFERENCES categoria (idcategoria);
+mysql> ALTER TABLE tipocategoria ADD FOREIGN KEY (idtipocategoria) REFERENCES categoria (idcategoria);
 
 mysql> CREATE TABLE cerveza_materiaprima (
     -> idcerveza_materiaprima INT PRIMARY KEY AUTO_INCREMENT,
